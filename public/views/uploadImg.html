@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/progressbar.css">
+    <link rel="stylesheet" href="../stylesheets/uploadImg.css">
+    <script type="text/javascript" src="../javascripts/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<form id="myForm" method="post" enctype="multipart/form-data" style="width: 100%;height: 100vh;position: relative;">
+
+    <div id="upBox">
+        <div id="inputBox">
+            <button type="button" id="selectImage">选择图片</button>
+        </div>
+        <div id="imgBox">
+        </div>
+        <button type="button" id="btn">上传</button>
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar progress-bar-info progress-bar-striped active" style="width: 20%;">
+                <div class="progress-value">20%</div>
+            </div>
+        </div>
+        <img id="showImage" src="">
+    </div>
+
+
+</form>
+
+<script src="../javascripts/uploadImg1.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+body{
+    width:100%;
+    height:100%;
+    background: url("../images/timg.jpg");
+    background-size: 100%;
+}
+
+.form_container{
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 500px;
+    /*height: 350px;*/
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -250px;
+    display: block;
+}
+
+.form_header{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: orange;
+}
+
+.input_container{
+    margin-top: 12px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.form_label{
+    width: 100%;
+    padding-right: 100%;
+    color: orange;
+}
+
+.input_container .form_input{
+    width: 440px;
+    height: 30px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+
+.input_container .icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    vertical-align:middle
+}
+
+.input_container .icon.icon-account{
+    background: url("../images/user.png");
+}
+
+.input_container .icon-password{
+    background: url("../images/password.png");
+}
+
+.form_login_button{
+    margin-top: 12px;
+    width: 100%;
+    height: 35px;
+    display: block;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    background-color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form_login_button:hover{
+    cursor: pointer;
+}
+
+.form_box{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form_box a{
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.code {
+    width: 150px;
+    height: 30px;
+    font-family:Arial;
+    font-style:italic;
+    color:blue;
+    font-size:30px;
+    border:0;
+    letter-spacing:3px;
+    font-weight:bolder;
+    cursor:pointer;
+    text-align:center;
+    vertical-align:middle;
+    display: inline-block;
+}
+
+.input_container a{
+    text-decoration:none;
+    font-size:12px;
+    color:#288bc4;
+}
+.input_container a:hover
+{
+    text-decoration:underline;
+}
+
+#inputCode{
+    width: 100px;
+}

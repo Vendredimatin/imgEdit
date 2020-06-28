@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../stylesheets/imageEdit.css">
+    <script type="text/javascript" src="../javascripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../javascripts/uploadImg1.js"></script>
+
+
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600"></canvas>
+<canvas id="meldCanvas" width="800" height="600"></canvas>
+<div class="toolContainer">
+
+    <div class="rangeContainer">
+        <input type="range" id="scale-range" min="0.5" max="3.0" step="0.01" value="1.0" style="display: block;">
+    </div>
+    <div class="otherContainer">
+        <div class="square">
+            <button id="rotateBtn" class="icon rotate-icon"></button>
+            <span class="text">旋转</span>
+        </div>
+        <div class="square">
+            <button id="clipBtn" class="icon clip-icon"></button>
+            <span class="text" id="clipText">裁剪</span>
+        </div>
+
+        <div class="square">
+            <button id="meldBtn" class="icon meld-icon"></button>
+            <span class="text" id="meldText">合并</span>
+        </div>
+        <div class="square">
+            <button id="textBtn" class="icon text-icon"></button>
+            <span class="text" id="textText">文字</span>
+        </div>
+        <div class="square">
+            <i id="undo" class="icon undo-icon"></i>
+            <span class="text">重置</span>
+        </div>
+        <div class="square">
+            <i id="back" class="icon back-icon"></i>
+            <span class="text">保存返回</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="choose-images" id="choose-images">
+    <span style="color: orange;font-family: 'Arial Narrow';font-weight: bold;margin-left: 15px;font-size: 20px">选择图片</span>
+    <ul class="clearfix">
+        <li>
+            <img id="img1"  width="120" height="80">
+            <h3>花朵</h3>
+        </li>
+        <li>
+            <img id="img2"  width="120" height="80">
+            <h3>坦克</h3>
+        </li>
+        <li>
+            <img id="img3"  width="120" height="80">
+            <h3>柯基</h3>
+        </li>
+        <li class="selected">
+            <img id="img4" width="120" height="80">
+            <h3>人</h3>
+        </li>
+        <li>
+            <img id="img5" width="120" height="80">
+            <h3>草地</h3>
+        </li>
+        <li>
+            <img src="../images/tree.jpg" width="120" height="80">
+            <h3>数</h3>
+        </li>
+    </ul>
+</div>
+<div class="paster-container">
+    <span style="color: orange;font-family: 'Arial Narrow';font-weight: bold;margin-left: 15px;font-size: 20px">选择贴纸</span>
+    <ul class="clearfix">
+        <li>
+                <img src="../images/cat-ear.png" width="120" height="80">
+                <h3>猫耳朵</h3>
+        </li>
+        <li>
+                <img src="../images/hat.png" width="120" height="80">
+                <h3>帽子</h3>
+        </li>
+        <li>
+                <img src="../images/pig_head.png" width="120" height="80">
+                <h3>猪头</h3>
+        </li>
+        <li class="selected">
+                <img src="../images/sun.png" width="120" height="80">
+                <h3>太阳</h3>
+        </li>
+        <li>
+                <img src="../images/beard.png" width="120" height="80">
+                <h3>胡须</h3>
+        </li>
+        <li>
+                <img src="../images/moon.png" width="120" height="80">
+                <h3>月亮</h3>
+        </li>
+    </ul>
+</div>
+
+
+
+<script>
+
+
+</script>
+</body>
+<script type="text/javascript" src="../javascripts/imageEdit.js"></script>
+</html>

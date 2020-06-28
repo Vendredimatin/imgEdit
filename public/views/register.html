@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../stylesheets/register.css">
+    <link rel="stylesheet" href="../stylesheets/zcity.css">
+    <script type="text/javascript" src="../javascripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../javascripts/zcity.js"></script>
+</head>
+<body>
+<div class="form_container">
+    <div class="header">
+        <button class="back"></button>
+        <h3 class="form_header">Register</h3>
+    </div>
+
+    <hr/>
+
+    <div class="input_container">
+        <label class="form_label"><b>Account</b></label>
+        <span class="icon icon-account"></span>
+        <input type="text" id="account" class="form_input" placeholder="Enter Account" name="account" required>
+        <span id="accountSame" style="color: red;display: none">this account has existed!</span>
+        <span id="notContentAccount" style="color: red;display: none">账号不符合条件，以字母开头，长度2-10</span>
+    </div>
+
+    <div class="input_container">
+        <label class="form_label"><b>Password</b></label>
+        <span class="icon icon-password"></span>
+        <input type="password" id="password" class="form_input" placeholder="Enter Password" name="password" required>
+    </div>
+
+
+    <div class="input_container">
+        <label class="form_label"><b>Confirm</b></label>
+        <span class="icon icon-password"></span>
+        <input type="password" id="confirmPassword" class="form_input" placeholder="Enter Password Again" name="confirmPassword" required>
+        <span id="pwdSame" style="color: red;display: none">two passwords are not same!</span>
+        <span id="notContentPwd" style="color: red;display: none">密码不符合要求，必须包含字母含数字的6-10个字符</span>
+
+    </div>
+
+    <div class="input_container">
+        <label class="form_label"><b>Phone</b></label>
+        <span class="icon icon-phone"></span>
+        <input type="text" id="phone" class="form_input" placeholder="Enter Phone" name="phone" required>
+        <span id="notContentPhone" style="color: red;display: none">手机号码不符合要求</span>
+    </div>
+
+    <div style="margin-top: 10px">
+        <td class="td-04">
+            <!--zcityGroup start-->
+            <div class="zcityGroup" city-range="{'level_start':1,'level_end':3}"></div>
+            <!--zcityGroup end-->
+        </td>
+    </div>
+
+    <button type="submit" id="submit" class="form_register_button">注册</button>
+</div>
+</form>
+
+<script>
+    zcityrun('.zcityGroup');
+    var OK = false;
+    $("#confirmPassword").blur(function () {
+        var password = $("#password").val();
+        var confirmPassword = $("#confirmPassword").val();
+        console.log(password, confirmPassword);
+        if (password != confirmPassword && password != ''){
+            $("#confirmPassword").val("");
+            $("#password").val("");
+            $("#pwdSame").css("display","block");
+            OK = false;
+        }else if (password != "") {
+            if (!checkPassword(password)){
+                $("#notContentPwd").css("display","block");
+                OK = false;
+            }
+            OK = true;
+        }
+    });
+
+    $("#account").blur(function () {
+        let account = $("#account").val();
+        $.ajax({
+            url:"../isRepeated?account="+account+"",
+            type:"get",
+            success:function (data) {
+                console.log(data);
+                if (data == "error"){
+                    OK = false;
+                    $("#accountSame").css("display","block");
+                }else{
+                    if (!checkAccount(account)){
+                        $("#notContentAccount").css("display","block");
+                    }
+                }
+            },
+            error:function (data) {
+                console.log("fail");
+            }
+        });
+    });
+    
+    $("#phone").blur(function () {
+        let b = /^1[34578]\d{9}$/;
+        let phone = $("#phone").val();
+        if (!b.test(phone)){
+            $("#notContentPhone").css("display","block");
+            OK = false;
+        }else
+            OK = true;
+    });
+
+    function checkAccount(account){
+        let b = /^[a-zA-Z]\w{1,10}$/;
+        return b.test(account);
+    }
+
+    function checkPassword(password){
+        //6-10个包含字母和数字的字符串
+        let b = /^(?![^a-zA-Z]+$)(?!\D+$).{6,10}$/;
+        return b.test(password);
+    }
+
+    $(":password").keydown(function () {
+        $("#pwdSame").css("display","none");
+        $("#notContentPwd").css("display","none");
+    });
+
+    $("#account").keydown(function () {
+        $("#accountSame").css("display","none");
+        $("#notContentAccount").css("display","none");
+    });
+
+    $("#phone").keydown(function () {
+        $("#notContentPhone").css("display","none");
+    });
+
+    $("#submit").click(function () {
+        var account = $("#account").val();
+        var password = $("#password").val();
+        let phone = $("#phone").val();
+
+        let location = "";
+        $(".currentValue").each(function () {
+            location=location+ $(this).val()+','
+        });
+        location.substr(0,location.length-1);
+        //location = location.slice(location.lastIndexOf(",")+1,location.length-1);
+
+        
+        if (account == "" && password == "" && phone == ""){
+            OK = false;
+            alert("account,password or phone is empty!");
+        }
+        if (OK){
+            $.ajax({
+                url:"../register?account="+account+"&password="+password+"&phone="+phone+"&location="+location+"",
+                type:"get",
+                success:function (data) {
+                    console.log("success");
+                    alert("注册成功！");
+                    history.go(-1);
+                },
+                error:function (data) {
+                    console.log("fail");
+                }
+            })
+        }else{
+            alert("用户名，密码或者电话不符合要求！");
+        }
+    });
+
+    $(".back").click(function () {
+        history.go(-1);
+    });
+</script>
+</body>
+</html>

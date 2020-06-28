@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .labels{
+            width: 400px;
+            height: 335px;
+            overflow: auto;
+            background: white;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 1000;
+            transform: translate(-50%, -50%);
+            border: 5px solid;
+        }
+    </style>
+</head>
+<body>
+<div class="weather">
+    <p style="    font-size: 50px;position: fixed;top: 0px;right: 0px;color: #111;cursor: pointer;margin-top: -15px;" onclick="closeLabels()">×</p>
+    <h2>你所在的省份：</h2>
+    <h2>你所在的城市：</h2>
+    <h2>天气情况：</h2>
+    <h2>当前温度：</h2>
+    <h2>风向：</h2>
+    <h2>风力等级：</h2>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#upBox{
+    text-align: center;
+    width:500px;
+    padding: 20px;
+    border: 1px solid #666;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    position: relative;
+    border-radius: 10px;
+}
+
+#selectImage{
+    width: 100%;
+    height: 40px;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    font-size: 16px;
+    z-index: 2;
+    cursor: pointer;
+}
+#inputBox input{
+    width: 114%;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: -14%;
+    z-index: 1;
+}
+#imgBox{
+    text-align: left;
+}
+.imgContainer{
+    display: inline-block;
+    width: 32%;
+    height: 150px;
+    margin-left: 1%;
+    border: 1px solid #666666;
+    position: relative;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.imgContainer img{
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+}
+.imgContainer p{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: black;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+.imgContainer:hover p{
+    display: block;
+}
+#btn{
+    outline: none;
+    width: 100px;
+    height: 30px;
+    background: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.editImgBtn {
+    position: fixed;
+    top: 50px;
+    right: 70px;
+    width: 32px;
+    height: 32px;
+    background: url("../images/editImg.png");
+}

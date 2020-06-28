@@ -1,0 +1,112 @@
+body{
+    width:100%;
+    height:100%;
+    background: url("../images/timg.jpg");
+    background-size: 100%;
+}
+
+.form_container{
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 500px;
+    height: 420px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -250px;
+    display: block;
+}
+
+.header{
+    height: 42px;
+}
+
+.back{
+    cursor: pointer;
+    border: none;
+    float: left;
+    width: 32px;
+    height: 32px;
+    background: url("../images/backLastPage.png");
+}
+
+.form_header{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: orange;
+}
+
+.input_container{
+    margin-top: 12px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.form_label{
+    width: 200px;
+    padding-right:100%;
+    color: orange;
+}
+
+.input_container .form_input{
+    width: 440px;
+    height: 30px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+
+.input_container .icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    vertical-align:middle
+}
+
+.input_container .icon.icon-account{
+    background: url("../images/user.png");
+}
+
+.input_container .icon-password{
+    background: url("../images/password.png");
+}
+
+.input_container .icon-phone{
+    background: url("../images/phone.png");
+}
+
+.form_register_button{
+    margin-top: 12px;
+    width: 95%;
+    height: 35px;
+    display: block;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    background-color: orange;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.form_login_button:hover{
+    cursor: pointer;
+}
+
+.form_box{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form_box a{
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}

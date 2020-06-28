@@ -1,0 +1,473 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    font-family: Microsoft YaHei, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.global_container {
+    margin: 70px 10% 3%;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #dcdcdc url("../images/movie/background.jpg");
+}
+
+.movie_header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    min-width: 1200px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.movie_header .logo{
+    float: left;
+    width: 216px;
+    height: 80px;
+    margin-left: 200px;
+    background-image: url("../images/movieLogo.png");
+}
+
+.movie_header .header-inner {
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.movie_header .nav {
+    display: inline-block;
+    background-color: #fff;
+    overflow: hidden;
+    margin-left: 40px;
+    float: left;
+}
+
+.movie_header ul, .movie_header li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+}
+
+.movie_header .nav .navbar li {
+    float: left;
+}
+
+.movie_header .nav .navbar li a {
+    text-align: center;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    width: 80px;
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+}
+
+.movie_header .nav .navbar li a.active {
+    color: #fff;
+    background-color: #ef4238;
+}
+
+.movie_header .user-info {
+    float: right;
+    position: relative;
+    z-index: 9999;
+    height: 100%;
+}
+
+.movie_header .user-info .user-avatar {
+    display: block;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top: none;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-left: 40px;
+    width: 56px;
+    height: 100%;
+}
+
+.movie_header .user-info .user-avatar img {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.movie_header .user-info .user-avatar:hover .caret {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.movie_header .user-info .user-avatar .caret {
+    position: absolute;
+    top: 39px;
+    right: 10px;
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 5px solid #666;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.movie_header .user-info .user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    border: 1px solid #d8d8d8;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    padding: 15px 26px 5px;
+    text-align: center;
+}
+
+.movie_header .user-info .user-menu li {
+    margin-bottom: 6px;
+}
+
+.movie_header .user-info .user-menu li > a {
+    color: #999;
+    display: block;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movies-channel {
+    width: 1120px;
+    overflow: hidden;
+    margin: 60px auto auto;
+}
+
+.own-nav {
+    margin-top: 60px;
+}
+
+.own-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.own-nav ul li {
+    float: left;
+
+}
+
+.own-nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.own-nav ul li a:hover {
+    background-color: #111;
+}
+
+.released-movies-penal {
+    display: block;
+}
+
+.tags-panel {
+    border: 1px solid #e5e5e5;
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.tags-panel li, .tags-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tags-line {
+    padding: 10px 0 !important;
+}
+
+.tags-title {
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    color: #999;
+    font-size: 14px;
+}
+
+.tags {
+    margin-left: 40px !important;
+}
+
+.tags li.active {
+    background: #f34d41;
+    color: #fff;
+}
+
+.tags li {
+    border-radius: 14px;
+    padding: 3px 9px;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.tags li {
+    border-radius: 14px;
+    padding: 3px 9px;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.tags li a {
+    color: #333;
+    font-size: 14px;
+}
+
+.movies-panel {
+    margin-top: 40px;
+}
+
+.movies-list {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.movie-list {
+    margin: -29px 0 20px -25px;
+}
+
+.movie-list dd {
+    margin: 30px 0 0 30px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.movie-item {
+    position: relative;
+    border: 1px solid #efefef;
+    margin: -1px;
+}
+
+.movie-poster {
+    background-color: #fcfcfc;
+    width: 160px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.channel-detail {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.channel-detail a {
+    color: #333;
+}
+
+.unreleased-movies-penal {
+    display: none;
+}
+
+.channel-action-addLabels {
+    background-color: #f34d41;
+}
+
+.channel-action {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 3px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 1px;
+}
+
+.channel-action span:hover {
+    cursor: pointer;
+}
+
+.labels {
+    width: 800px;
+    height: 550px;
+    overflow: auto;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    border: 5px solid;
+    display: none;
+}
+
+
+
+.labels li {
+    display: inline-block;
+    font-size: .8rem;
+    padding: 0 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    color: #666;
+}
+
+.labels .tags-line ul li{
+    height: 27px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.labels li a {
+    color: black;
+}
+
+.self-define-label-input-container{
+    display: none;
+}
+
+.self-define-label{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.self-define-label-add-button{
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    border-color: white;
+    background-image: url("../images/selfLabelAddition.png");
+    cursor: pointer;
+    display: inline-block;
+}
+
+.chosen-label-list{
+    width: 600px;
+    margin-left: 150px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tag-item{
+    height: 30px;
+    line-height: 30px;
+    background-color: #66CCFF;
+    padding: 5px 10px;
+    text-align: center;
+    float: left;
+    margin: 5px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.tag-item .deleteChosenLabel{
+    float: right;
+    width: 15px;
+    height: 15px;
+    background-image: url("../images/x.png");
+    background-repeat: round;
+    margin-top: -40px;
+    margin-right: -15px;
+    display: block;
+}
+
+.movies-pager {
+    text-align: center;
+}
+
+.list-pager{
+    list-style: none;
+}
+
+.list-pager li {
+    display: inline-block;
+    height: 30px;
+    margin: 0 4px;
+    border: 1px solid #d8d8d8;
+    border-top-color: rgb(216, 216, 216);
+    border-right-color: rgb(216, 216, 216);
+    border-bottom-color: rgb(216, 216, 216);
+    border-left-color: rgb(216, 216, 216);
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+}
+
+.list-pager li.active{
+    border-color: #ef4238;
+    background-color: #ef4238;
+}
+
+.list-pager li.active a{
+    color: white;
+}
+
+.list-pager a{
+    display: block;
+    padding: 0 12px;
+    color: #333333;
+}
+
+.weather{
+    width: 400px;
+    height: 335px;
+    overflow: auto;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    border: 2px solid;
+}

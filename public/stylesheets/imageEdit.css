@@ -1,0 +1,160 @@
+body {
+    background-color: black;
+}
+
+#myCanvas {
+    border: 1px solid black;
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+}
+
+#meldCanvas {
+    background: rgba(255, 255, 255, 0); /*关键点*/
+    position: absolute;
+    z-index: 1; /*确保在遮盖的元素的上方*/
+}
+
+.toolContainer {
+    left: 830px;
+    width: 200px;
+    height: 600px;
+    position: absolute;
+    background-color: #000000;
+}
+
+.rangeContainer {
+    width: 50px;
+    transform: rotate(90deg);
+    margin-top: 50px;
+}
+
+.rangeContainer input {
+    width: 500px;
+}
+
+.otherContainer {
+    top: 0px;
+    left: 80px;
+    width: 50px;
+    position: absolute;
+}
+
+.otherContainer .square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    text-align: center;
+    vertical-align: center;
+}
+
+.square .text {
+    display: block;
+    color: orange;
+}
+
+.square .icon {
+    display: block;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+.square .choose-icon {
+    background-image: url("../images/images.png");
+}
+
+.square .rotate-icon {
+    background-image: url('../images/rotate.ico');
+}
+
+.square .clip-icon {
+    background-image: url('../images/clip.ico');
+}
+
+.square .meld-icon {
+    background-image: url("../images/meld.png");
+}
+
+.square .undo-icon {
+    background-image: url("../images/undo.png");
+}
+
+.square .text-icon {
+    background-image: url("../images/text.png");
+}
+
+.square .complete-icon {
+    background-image: url("../images/complete.png");
+}
+
+.square .back-icon{
+    background-image: url("../images/back.png");
+}
+
+.paster-container {
+    position: absolute;
+    top: 630px;
+    width: 830px;
+    height: 185px;
+    display: none;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.paster-container ul {
+    -webkit-padding-start: 0px;
+}
+
+.paster-container ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.paster-container ul li:hover {
+    cursor: pointer;
+}
+
+.paster-container .clearfix li h3 {
+    text-align: center;
+}
+
+.choose-images {
+    position: absolute;
+    top: 630px;
+    width: 830px;
+    height: 185px;
+    display: none;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.choose-images ul {
+    -webkit-padding-start: 0px;
+}
+
+.choose-images ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.choose-images ul li:hover {
+    cursor: pointer;
+}
+
+.choose-images .clearfix li h3 {
+    text-align: center;
+}
+
